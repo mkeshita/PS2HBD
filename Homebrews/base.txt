@@ -1,2 +1,2 @@
-OPL v0.93|https://subversion.assembla.com/svn/zimba/PS2HBD/homebrews/OpenPS2Loader_0.9.3.zip
-wLaunchELF (v4.43a Commits.970ca99)|https://subversion.assembla.com/svn/zimba/PS2HBD/homebrews/wLaunchELF_v4.43a.zip
+OPL v0.93|https://github.com/tryller/PS2HBD/blob/main/Homebrews/OpenPS2Loader_0.9.3.zip?raw=true
+wLaunchELF (v4.43a Commits.970ca99)|https://github.com/tryller/PS2HBD/blob/main/Homebrews/wLaunchELF_v4.43a.zip?raw=true
