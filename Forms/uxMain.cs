@@ -28,7 +28,9 @@ namespace PS2HBD.Forms
         private IFileDownloader fileDownloader = null;
         private Stopwatch sw = null;
 
-        private TextProgressBar uxProgressBar = null;
+        private CustomProgressBar uxProgressBar = null;
+        private string downloadPath = Application.StartupPath + "\\Downloads";
+
         public uxMain()
         {
             InitializeComponent();
@@ -41,12 +43,17 @@ namespace PS2HBD.Forms
             uxDataTable.Columns.Add("URL");
 
             uxDatagridList.DataSource = uxDataTable.DefaultView;
+            if (!Directory.Exists(downloadPath))
+            {
+                Directory.CreateDirectory(downloadPath);
+                Thread.Sleep(300);
+            }
+
+
             //CheckVersion();
             try
             {
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-
-
                 fileDownloader = new FileDownloader.FileDownloader();
 
                 _webClient = new WebClient();
@@ -88,23 +95,8 @@ namespace PS2HBD.Forms
             uxDatagridList.Columns["URL"].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
-        public static byte[] GetFileViaHttp(string url)
-        {
-            using (WebClient client = new WebClient())
-            {
-                return client.DownloadData(url);
-            }
-        }
-
         private void uxDatagridList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string path = Application.StartupPath + "\\Downloads";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-                Thread.Sleep(1500);
-            }
-
             string baseUrl = uxDatagridList.Rows[uxDatagridList.CurrentCell.RowIndex].Cells["URL"].Value.ToString();
             string nome = uxDatagridList.Rows[uxDatagridList.CurrentCell.RowIndex].Cells["NOME"].Value.ToString();
 
@@ -112,16 +104,17 @@ namespace PS2HBD.Forms
             {
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
-                uxProgressBar = new TextProgressBar();
+                uxProgressBar = new CustomProgressBar();
                 uxProgressBar.Name = "uxProgressBar";
                 uxProgressBar.Dock = DockStyle.Bottom;
                 uxProgressBar.ForeColor = Color.Black;
+                uxProgressBar.BackColor = Color.Teal;
                 uxPanel.Controls.Add(uxProgressBar);
 
                 fileDownloader = new FileDownloader.FileDownloader();
                 fileDownloader.DownloadFileCompleted += DownloadFileCompleted;
                 fileDownloader.DownloadProgressChanged += DownloadFileProgressChanged;
-                fileDownloader.DownloadFileAsync(new Uri(baseUrl), path + "\\" + nome + ".zip");
+                fileDownloader.DownloadFileAsync(new Uri(baseUrl), downloadPath + "\\" + nome + ".zip");
 
                 sw = new Stopwatch();
                 sw.Start();

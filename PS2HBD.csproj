@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\logo_icone.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework">
       <HintPath>..\MetroFrameworkModernUI\Bin\MetroFramework.dll</HintPath>
@@ -77,7 +80,7 @@
     <Compile Include="Class\WebHeaderCollectionExtensions.cs" />
     <Compile Include="Class\WebProviders.cs" />
     <Compile Include="Extensions\Converter.cs" />
-    <Compile Include="Extensions\Prog.cs">
+    <Compile Include="Extensions\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\uxMain.cs">
@@ -118,6 +121,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_icone.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

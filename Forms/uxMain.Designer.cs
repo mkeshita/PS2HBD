@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxMain));
             this.uxDatagridList = new MetroFramework.Controls.MetroGrid();
             this.uxPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uxDatagridList)).BeginInit();
@@ -115,6 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 463);
             this.Controls.Add(this.uxPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "uxMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
