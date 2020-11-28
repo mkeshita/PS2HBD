@@ -1,2 +1,3 @@
 OPL v0.93|https://github.com/tryller/PS2HBD/blob/main/Homebrews/OpenPS2Loader_0.9.3.zip?raw=true
+OPL v1850|https://github.com/tryller/PS2HBD/blob/main/Homebrews/OpenPS2Loader_1850.zip?raw=true
 wLaunchELF (v4.43a Commits.970ca99)|https://github.com/tryller/PS2HBD/blob/main/Homebrews/wLaunchELF_v4.43a.zip?raw=true

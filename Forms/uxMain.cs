@@ -19,9 +19,6 @@ namespace PS2HBD.Forms
 {
     public partial class uxMain : MetroForm
     {
-        private List<DataGridViewCell> uxContainingCells = new List<DataGridViewCell>();
-        private int uxCurrentContainingCellListIndex = 0;
-
         public static string URL_ENVIRONMENT = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\zimba\ps2hbd.dat";
         public static string URL_APPS = "https://raw.githubusercontent.com/tryller/PS2HBD/main/Homebrews/base.txt";
         private string uxPath = URL_ENVIRONMENT;
@@ -71,8 +68,6 @@ namespace PS2HBD.Forms
                     row["URL"] = l[1];
                     uxDataTable.Rows.Add(row);
                 }
-
-                uxTextBoxSearch.Text = string.Empty;
             }
             catch
             {
@@ -91,23 +86,6 @@ namespace PS2HBD.Forms
             uxDatagridList.Columns["NOME"].SortMode = DataGridViewColumnSortMode.NotSortable;
             uxDatagridList.Columns["URL"].Width = 0;
             uxDatagridList.Columns["URL"].SortMode = DataGridViewColumnSortMode.NotSortable;
-        }
-
-        private void uxTextBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            uxContainingCells.Clear();
-            uxCurrentContainingCellListIndex = 0;
-            foreach (DataGridViewRow row in uxDatagridList.Rows)
-            {
-                if (row.Cells["NOME"].Value == DBNull.Value || row.Cells["NOME"].Value == null)
-                    continue;
-
-                if (row.Cells["NOME"].Value.ToString().ToLower().Trim().Contains(uxTextBoxSearch.Text.ToLower().Trim()))
-                    uxContainingCells.Add(row.Cells["NOME"]);
-            }
-
-            if (uxContainingCells.Count > 0)
-                uxDatagridList.CurrentCell = uxContainingCells[uxCurrentContainingCellListIndex++];
         }
 
         public static byte[] GetFileViaHttp(string url)

@@ -32,32 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.uxTextBoxSearch = new MetroFramework.Controls.MetroTextBox();
             this.uxDatagridList = new MetroFramework.Controls.MetroGrid();
             this.uxPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uxDatagridList)).BeginInit();
             this.uxPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // uxTextBoxSearch
-            // 
-            this.uxTextBoxSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uxTextBoxSearch.Lines = new string[0];
-            this.uxTextBoxSearch.Location = new System.Drawing.Point(0, 0);
-            this.uxTextBoxSearch.MaxLength = 32767;
-            this.uxTextBoxSearch.Name = "uxTextBoxSearch";
-            this.uxTextBoxSearch.PasswordChar = '\0';
-            this.uxTextBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.uxTextBoxSearch.SelectedText = "";
-            this.uxTextBoxSearch.Size = new System.Drawing.Size(325, 23);
-            this.uxTextBoxSearch.Style = MetroFramework.MetroColorStyle.Blue;
-            this.uxTextBoxSearch.StyleManager = null;
-            this.uxTextBoxSearch.TabIndex = 33;
-            this.uxTextBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.uxTextBoxSearch.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.uxTextBoxSearch.UseSelectable = true;
-            this.uxTextBoxSearch.UseStyleColors = true;
-            this.uxTextBoxSearch.TextChanged += new System.EventHandler(this.uxTextBoxSearch_TextChanged);
             // 
             // uxDatagridList
             // 
@@ -65,7 +44,7 @@
             this.uxDatagridList.AllowUserToDeleteRows = false;
             this.uxDatagridList.AllowUserToResizeColumns = false;
             this.uxDatagridList.AllowUserToResizeRows = false;
-            this.uxDatagridList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.uxDatagridList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.uxDatagridList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.uxDatagridList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.uxDatagridList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -91,7 +70,7 @@
             this.uxDatagridList.FontSize = MetroFramework.MetroDataGridSize.Medium;
             this.uxDatagridList.FontWeight = MetroFramework.MetroDataGridWeight.Regular;
             this.uxDatagridList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.uxDatagridList.Location = new System.Drawing.Point(0, 23);
+            this.uxDatagridList.Location = new System.Drawing.Point(0, 0);
             this.uxDatagridList.MultiSelect = false;
             this.uxDatagridList.Name = "uxDatagridList";
             this.uxDatagridList.ReadOnly = true;
@@ -114,7 +93,7 @@
             this.uxDatagridList.ShowCellToolTips = false;
             this.uxDatagridList.ShowEditingIcon = false;
             this.uxDatagridList.ShowRowErrors = false;
-            this.uxDatagridList.Size = new System.Drawing.Size(325, 360);
+            this.uxDatagridList.Size = new System.Drawing.Size(325, 383);
             this.uxDatagridList.Style = MetroFramework.MetroColorStyle.Blue;
             this.uxDatagridList.TabIndex = 54;
             this.uxDatagridList.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -124,7 +103,6 @@
             // uxPanel
             // 
             this.uxPanel.Controls.Add(this.uxDatagridList);
-            this.uxPanel.Controls.Add(this.uxTextBoxSearch);
             this.uxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uxPanel.Location = new System.Drawing.Point(20, 60);
             this.uxPanel.Name = "uxPanel";
@@ -151,7 +129,6 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTextBox uxTextBoxSearch;
         internal MetroFramework.Controls.MetroGrid uxDatagridList;
         private System.Windows.Forms.Panel uxPanel;
     }
