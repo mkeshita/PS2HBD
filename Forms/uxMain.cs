@@ -23,7 +23,7 @@ namespace PS2HBD.Forms
         private int uxCurrentContainingCellListIndex = 0;
 
         public static string URL_ENVIRONMENT = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\zimba\ps2hbd.dat";
-        public static string URL_APPS = "https://pastebin.com/raw/8LFAHeg9";
+        public static string URL_APPS = "https://raw.githubusercontent.com/tryller/PS2HBD/main/Homebrews/base.txt";
         private string uxPath = URL_ENVIRONMENT;
 
         private DataTable uxDataTable = null;
@@ -122,7 +122,10 @@ namespace PS2HBD.Forms
         {
             string path = Application.StartupPath + "\\Downloads";
             if (!Directory.Exists(path))
+            {
                 Directory.CreateDirectory(path);
+                Thread.Sleep(1500);
+            }
 
             string baseUrl = uxDatagridList.Rows[uxDatagridList.CurrentCell.RowIndex].Cells["URL"].Value.ToString();
             string nome = uxDatagridList.Rows[uxDatagridList.CurrentCell.RowIndex].Cells["NOME"].Value.ToString();
