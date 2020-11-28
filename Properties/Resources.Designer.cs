@@ -61,11 +61,22 @@ namespace PS2HBD.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://subversion.assembla.com/svn/zimba/PS2HBD/base.txt.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static string repo {
+        internal static System.Drawing.Bitmap logo {
             get {
-                return ResourceManager.GetString("repo", resourceCulture);
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon logo_icone {
+            get {
+                object obj = ResourceManager.GetObject("logo_icone", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }
