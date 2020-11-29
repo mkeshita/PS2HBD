@@ -1,4 +1,4 @@
-Cheat Device PS2 (v1.7.5)|https://github.com/tryller/PS2HBD/blob/main/Homebrews/CheatDevice_(v1.7.5).zip?raw=true
+Cheat Device PS2 (v1.7.5)|https://www.mediafire.com/file/kr6f65o9unv3hoy/CheatDevice_%2528v1.7.5%2529.zip/file
 OPL v0.93|https://github.com/tryller/PS2HBD/blob/main/Homebrews/OpenPS2Loader_0.9.3.zip?raw=true
 OPL v1850|https://github.com/tryller/PS2HBD/blob/main/Homebrews/OpenPS2Loader_1850.zip?raw=true
 POPStarter (r13 RIP 06)|https://github.com/tryller/PS2HBD/blob/main/Homebrews/POPStarter_(r13_RIP_06).zip?raw=true
