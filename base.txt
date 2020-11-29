@@ -1,7 +1,7 @@
 Cheat Device (v1.7.5)|https://www.mediafire.com/file/kr6f65o9unv3hoy/CheatDevice_%2528v1.7.5%2529.zip/file
 OPL v0.93|https://www.mediafire.com/file/5ek7xa8sg90gta4/OpenPS2Loader_0.9.3.zip/file
 OPL v1850|https://www.mediafire.com/file/191uc8e35df1g2w/OpenPS2Loader_1850.zip/file
-POPStarter (r13 RIP 06)|https://www.mediafire.com/file/zwsqsiwj4hh8voq/POPStarter_%2528r13_RIP_06%2529.zip/file
+POPStarter_r13|https://www.mediafire.com/file/zwsqsiwj4hh8voq/POPStarter_%2528r13_RIP_06%2529.zip/file
 Simple Media System v2.9|https://www.mediafire.com/file/zsxd3lq62b28q6u/simple_media_system.zip/file
 USB Util|https://www.mediafire.com/file/u8c8vtjhlh49umf/USB_Util.zip/file
 wLaunchELF (v4.43a Commits.970ca99)|https://www.mediafire.com/file/dcr1w7c04jcs3w9/wLaunchELF_v4.43a.zip/file
